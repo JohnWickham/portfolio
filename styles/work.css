@@ -1,0 +1,87 @@
+/* Page Header Section */
+
+.page-header {
+	background-image: url('/resources/work-header-iPhone.svg'), url('/resources/work-header-microns.png');
+	background-repeat: no-repeat;
+	background-size: 190px, 200px;
+	background-position: left center, right center;
+}
+
+/* Flex Layout */
+
+#layout-container-section {
+	overflow: hidden;
+}
+
+.layout-row {
+	
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	
+	display: flex;
+	flex-direction: row;
+	
+}
+
+.layout-item {
+	
+	width: 50%;
+	
+	border: 8px solid white;
+	padding: 50px;
+	box-sizing: border-box;
+	
+	color: #343747;
+	background-color: #F9F9F9;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position: left -60px bottom -20px;
+	
+	transition: background-size 0.5s ease-out;
+		
+}
+
+.layout-item:hover {
+	background-size: 100%;
+}
+
+#apps-content-section {
+	background-image: url('/resources/native-background.svg');
+}
+
+#web-content-section {
+	background-image: url('/resources/webdev-background.svg');
+}
+
+#dribbble-content-section {
+	background-image: url('/resources/dribbble-background.svg');
+}
+
+#github-content-section {
+	background-image: url('/resources/github-background.svg');
+}
+
+footer {
+	background: #C95D3A;
+}
+
+@media screen and (max-width: 700px) {
+	
+	/* Page Header */
+	
+	.page-header {
+		background-image: none;
+	}
+	
+	.layout-row {
+		flex: none;
+		display: block;
+	}
+	
+	.layout-item {
+		width: 100%;
+		display: block;
+	}
+	
+}

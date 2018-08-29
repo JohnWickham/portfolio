@@ -1,0 +1,9 @@
+DirectoryIndex PitchFork.html
+
+RewriteEngine on
+# Use PHP5.4 as default
+AddHandler application/x-httpd-php54 .php
+RewriteCond %{HTTP_HOST} ^pitchfork\.wjwickham\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.pitchfork\.wjwickham\.com$
+RewriteRule ^/?$ "http\:\/\/wjwickham\.com\/PitchFork\/PitchFork\.html" [R=301,L]
+

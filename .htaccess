@@ -1,0 +1,8 @@
+DirectoryIndex home.html
+
+ErrorDocument 404 /404.html
+
+#Force HTTP connections to use HTTPS
+RewriteEngine on 
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

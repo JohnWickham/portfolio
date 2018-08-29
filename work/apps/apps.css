@@ -1,0 +1,25 @@
+.product_content_container_internal > h1 {
+	padding-left: 7px;
+}
+
+.product_content_body_container {
+	
+	margin-left: 100px;
+	
+}
+
+.product_model_container {
+	
+	white-space: nowrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	
+}
+
+.product_model {
+	
+	width: 30%;
+	min-width: 250px;
+	
+}
