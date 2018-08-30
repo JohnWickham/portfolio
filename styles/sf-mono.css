@@ -1,11 +1,11 @@
-/** Bold */
+/* Bold */
 @font-face {
   font-family: "SF Mono";
   font-weight: 700;
   src: url("/resources/fonts/SFMono-Bold.otf");
 }
 
-/** Bold Italic */
+/* Bold Italic */
 @font-face {
   font-family: "SF Mono";
   font-weight: 700;
@@ -13,14 +13,14 @@
   src: url("/resources/fonts/SFMono-BoldItalic.otf");
 }
 
-/** Heavy */
+/* Heavy */
 @font-face {
   font-family: "SF Mono";
   font-weight: 800;
   src: url("/resources/fonts/SFMono-Heavy.otf");
 }
 
-/** Heavy Italic */
+/* Heavy Italic */
 @font-face {
   font-family: "SF Mono";
   font-weight: 800;
@@ -28,14 +28,14 @@
   src: url("/resources/fonts/SFMono-HeavyItalic.otf");
 }
 
-/** Light */
+/* Light */
 @font-face {
   font-family: "SF Mono";
   font-weight: 200;
   src: url("/resources/fonts/SFMono-Light.otf");
 }
 
-/** Light Italic */
+/* Light Italic */
 @font-face {
   font-family: "SF Mono";
   font-weight: 200;
@@ -43,14 +43,14 @@
   src: url("/resources/fonts/SFMono-HeavyItalic.otf");
 }
 
-/** Medium */
+/* Medium */
 @font-face {
   font-family: "SF Mono";
   font-weight: 500;
   src: url("/resources/fonts/SFMono-Medium.otf");
 }
 
-/** Medium Italic */
+/* Medium Italic */
 @font-face {
   font-family: "SF Mono";
   font-weight: 500;
@@ -58,14 +58,14 @@
   src: url("/resources/fonts/SFMono-MediumItalic.otf");
 }
 
-/** Regular */
+/* Regular */
 @font-face {
   font-family: "SF Mono";
   font-weight: 400;
   src: url("/resources/fonts/SFMono-Regular.otf");
 }
 
-/** Regular Italic */
+/* Regular Italic */
 @font-face {
   font-family: "SF Mono";
   font-weight: 400;
@@ -73,14 +73,14 @@
   src: url("/resources/fonts/SFMono-RegularItalic.otf");
 }
 
-/** Semibold */
+/* Semibold */
 @font-face {
   font-family: "SF Mono";
   font-weight: 600;
   src: url("/resources/fonts/SFMono-Semibold.otf");
 }
 
-/** Semibold Italic */
+/* Semibold Italic */
 @font-face {
   font-family: "SF Mono";
   font-weight: 600;
