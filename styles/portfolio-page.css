@@ -11,6 +11,7 @@ nav {
 	width: 100vw;
 	height: auto;
 	padding: 20px;
+	z-index: 999;
 	
 	background: white;
 	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
@@ -35,7 +36,7 @@ nav > a:hover {
 /* Content */
 
 code {
-	font-family: "SF Mono";
+	font-family: "SF Mono", monospace;
 	font-size: 0.9em;
 }
 
@@ -83,7 +84,11 @@ code {
 	/* Product Content Sections */
 
 	.product_content_container {
-		padding: 20px 40px 20px 40px;
+		padding: 20px 40px;
+	}
+	
+	.product_content_container:first-of-type {
+		padding-top: 60px;
 	}
 	
 	.product_content_title_icon {
