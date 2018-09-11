@@ -1,17 +1,10 @@
-@import url("/styles/sf-mono.css");
-
 html, body {
 	margin: 50px;
-	
 	background: #FFF8EF;
-	color: #343747;
-	font-family: "SF Mono", monospace;
-	letter-spacing: 0.5pt;
-	line-height: 24pt;
 }
 
 div {
-	max-width: 550px;
+	max-width: 500px;
 	margin: auto auto;
 }
 
@@ -19,6 +12,26 @@ div > img {
 	display: block;
 	margin: auto auto;
 	margin-bottom: 30px;
+}
+
+div p {
+	color: #343747;
+	font-family: monospace;
+	letter-spacing: 0.5pt;
+	line-height: 24pt;
+	font-weight: 400;
+}
+
+p a {
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	color: inherit;
+	
+	transition: border-bottom 0.2s;
+}
+
+p a:hover {
+	border-bottom: 1px solid red;
 }
 
 @media screen and (max-width: 700px) {
