@@ -1,0 +1,28 @@
+@import url("/styles/sf-mono.css");
+
+html, body {
+	margin: 50px;
+	
+	background: #FFF8EF;
+	color: #343747;
+	font-family: "SF Mono", monospace;
+	letter-spacing: 0.5pt;
+	line-height: 24pt;
+}
+
+div {
+	max-width: 550px;
+	margin: auto auto;
+}
+
+div > img {
+	display: block;
+	margin: auto auto;
+	margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
+	html, body {
+		margin: 10px;
+	}
+}
