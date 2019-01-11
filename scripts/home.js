@@ -47,18 +47,18 @@ window.onload = function() {
 		
 		// Don't perform the animation until the image is scrolled into view!
 		// Thanks to https://stackoverflow.com/questions/21561480/trigger-event-when-user-scroll-to-specific-element-with-jquery
-		$(window).scroll(function() {
-		   var hT = image.offset().top,
-		       hH = image.outerHeight(),
-		       wH = $(window).height(),
-		       wS = $(this).scrollTop();
-		   if (wS > (hT + hH - wH)) {
-		       image.addClass("animated");// The animated class actually has the animation
-		   }
-		   else if (image.hasClass("animated")) {
-			   image.removeClass("animated");// Remove the class so we can re-add it to repeat the animation
-		   }
-		});
+    $(window).scroll(function() {
+      var hT = mainImage.offset().top,
+          hH = mainImage.outerHeight(),
+          wH = $(window).height(),
+          wS = $(this).scrollTop();
+      if (wS > (hT + hH - wH)) {
+        mainImage.addClass("animated");// The animated class actually has the animation
+      }
+      else if (mainImage.hasClass("animated")) {
+        mainImage.removeClass("animated");// Remove the class so we can re-add it to repeat the animation
+      }
+    });
 		
 	}
 	
