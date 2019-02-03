@@ -83,24 +83,12 @@ nav ul li a.selected {
 	color: white;	
 }
 
-nav ul li a.selected:after {
-	
-	content: "";
-	display: block;
-	
-	width: 4px; 
-	height: 4px; 
-	margin: auto auto;
-	
-	border-radius: 2px; 
-	background: white;
-	
-}
-
+/* The hover indicator has been removed because it required two taps on the link to navigate on iOS.
 nav ul li a:not(.selected):hover:after {
 	
 	content: "";
 	display: block;
+	visibility: visible;
 	
 	width: 4px; 
 	height: 4px; 
@@ -111,9 +99,22 @@ nav ul li a:not(.selected):hover:after {
 	transition: background 0.15s;
 	
 }
+*/
 
-nav ul li a:not(.selected):active:after {
+nav ul li a.selected:after {
+	
+	content: "";
+	display: block;
+	visibility: visible;
+	
+	width: 4px; 
+	height: 4px; 
+	margin: auto auto;
+	
+	border-radius: 2px; 
 	background: white;
+	transition: background 0.15s;
+	
 }
 
 /* Text Styles */
