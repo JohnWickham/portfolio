@@ -83,24 +83,6 @@ nav ul li a.selected {
 	color: white;	
 }
 
-/* The hover indicator has been removed because it required two taps on the link to navigate on iOS.
-nav ul li a:not(.selected):hover:after {
-	
-	content: "";
-	display: block;
-	visibility: visible;
-	
-	width: 4px; 
-	height: 4px; 
-	margin: auto auto;
-	
-	border-radius: 2px; 
-	background: rgba(255, 255, 255, 0.25);
-	transition: background 0.15s;
-	
-}
-*/
-
 nav ul li a.selected:after {
 	
 	content: "";
@@ -253,6 +235,26 @@ footer p {
 	-moz-user-modify: none;
 	-moz-user-select: none;
 	
+}
+
+@media (hover: hover) {
+  
+  nav ul li a:not(.selected):hover:after {
+  	
+    	content: "";
+    	display: block;
+    	visibility: visible;
+    	
+    	width: 4px; 
+    	height: 4px; 
+    	margin: auto auto;
+    	
+    	border-radius: 2px; 
+    	background: rgba(255, 255, 255, 0.25);
+    	transition: background 0.15s;
+  	
+  }
+  
 }
 
 /* Size Optimizations */
