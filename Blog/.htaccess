@@ -1,7 +1,0 @@
-DirectoryIndex dotWrite.php dotDraft.php
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^blog\.wjwickham\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.blog\.wjwickham\.com$
-RewriteRule ^/?$ "https\:\/\/wjwickham\.com\/Blog\/dotWrite\.html" [R=301,L]
-
