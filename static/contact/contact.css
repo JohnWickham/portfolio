@@ -1,0 +1,70 @@
+body {
+	background: #E06841;
+}
+
+/* Page Header Section */
+
+.page-header {
+	
+	background-image: url('/resources/work-header-iPhone.svg'), url('/resources/work-header-microns.png');
+	background-position: left center, right center;
+	background-repeat: no-repeat;
+	background-size: 15% auto;
+	
+}
+
+/* Contact Form */
+
+#contact-form {
+	
+	width: 50%;
+	margin: auto auto;
+	
+}
+
+#contact-form input, #contact-form textarea {
+	
+	padding: 10px;
+	box-sizing: border-box;
+	
+	margin: 0;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 8px;
+	border: none;
+	color: white;
+	
+	transition: background 0.1s, color 0.1s;
+	
+}
+
+#contact-form input {
+	width: 50%;
+}
+
+#contact-form textarea {
+	width: 100%;
+}
+
+#contact-form input::placeholder {
+	color: white;
+	opacity: 0.75
+}
+
+#contact-form input:focus::placeholder {
+	color: #93959E;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+	
+	background: white;
+	color: #343747;
+	
+}
+
+@media screen and (max-width: 700px) {
+	
+	#contact-form {
+		width: 90%;
+	}
+	
+}

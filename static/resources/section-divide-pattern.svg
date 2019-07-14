@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280px" height="116px" viewBox="0 0 1280 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>section-divide-pattern</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F8F9FB" offset="0%"></stop>
+            <stop stop-color="#FAFAFB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="13&quot;-MacBook-in-Safari" transform="translate(0.000000, -1122.000000)" fill="url(#linearGradient-1)">
+            <g id="Experience-Section" transform="translate(0.000000, 538.000000)">
+                <path d="M1,584 L1281,584 L1281,610.374257 L1244.73916,625.934737 C1221.20726,637.815997 1194.474,641.80093 1168.5,637.299158 C1142.4723,632.788078 1115.68636,636.440981 1091.81703,647.756711 L1080.42843,653.155698 C1063.48986,661.185766 1043.5345,659.43773 1028.25,648.585008 C1012.43927,637.358635 991.05921,632.837874 973.68603,636.71431 C900,653.155698 837.733667,693.863974 750.809846,686.468014 L691.444233,679.931512 C672.650878,677.862253 653.635734,679.364616 635.400505,684.359457 L600.701288,693.863974 C567.233763,701.287991 532.333333,701.287991 496,693.863974 C440,679.931512 413.5,653.155698 349.5,648.585008 C284.784226,643.9632 256,682.250899 214,684.359457 C172,686.468014 141.5,665.154906 118.5,665.154906 C95.5,665.154906 83,679.194678 56,679.194678 C29,679.194678 17.5,653.155698 0,653.155698 L1,584 Z" id="section-divide-pattern"></path>
+            </g>
+        </g>
+    </g>
+</svg>

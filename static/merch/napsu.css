@@ -1,0 +1,146 @@
+body {
+	margin: 30px 100px;
+	padding: 0px;
+	background: #FFC541;
+	color: white;
+	font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', Arial, sans-serif;
+}
+
+.container {
+	background: white;
+	box-shadow: 0px 5px 15px rgba(230, 135, 0, 0.40);
+	color: #343747;
+	border-radius: 12px;
+	padding: 30px 30px;
+	margin: 30px;
+}
+
+.sunset-shadow {
+	text-shadow: 3px 3px 0 #E58600;	
+}
+
+.marker {
+	font-family: 'Permanent Marker';
+}
+
+.capped {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 4em;
+	line-height: 1em;
+	margin: 0;
+}
+
+h2 {
+	font-size: 2em;
+	margin: 0;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+a {
+	color: #E58600;
+}
+
+*::selection {
+	color: white;
+	background: #8DDF46;
+}
+
+.model {
+	width: 50%;
+}
+
+.stack-left {
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+.stack-right {
+	display: block;
+	float: right;
+	width: 50%;
+}
+
+.leader {
+	letter-spacing: 4px;
+	color: #E58600;
+}
+
+.subtle {
+	color: gray;
+}
+
+#detail-container {
+	width: calc(50% - 150px);
+}
+
+#model-macbook {
+	width: calc(50% + 100px);
+	margin-left: -100px;
+}
+
+.price_group {
+	display: inline-block;
+	margin: 30px 30px 30px 0px;
+}
+
+.price_leader {
+	font-weight: 700;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	color: gray;
+	margin: 0px;
+}
+
+.pricetag {
+	font-weight: 200;
+	font-size: 3em;
+	line-height: 1em;
+	margin: 0;
+}
+
+@media screen and (max-width: 1000px) {
+	
+	body {
+		margin: 10px;
+	}
+	
+	.stack-left {
+		width: 100%;
+		float: none;
+	}
+	
+	.stack-right {
+		width: 100%;
+		float: none;
+	}
+	
+	.model {
+		width: 100%;
+	}
+	
+	#detail-container {
+		width: calc(100% - 80px);
+		margin: 10px;
+	}
+	
+	h1 {
+		font-size: 2em;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+	
+	#model-macbook {
+		width: 100%;
+		margin-left: -10px;
+	}
+	
+}

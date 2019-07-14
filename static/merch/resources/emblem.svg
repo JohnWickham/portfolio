@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="218px" height="137px" viewBox="0 0 218 137" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>emblem</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M198.750572,141.929266 L196.43522,141.929266 L185.273373,102.269864 L191.541824,79.8314199 L203.322612,124.56751 L234.019465,8 L247.903411,8 L210.210005,141.929266 L198.750572,141.929266 Z M161.408674,17.4756813 L126.382129,141.929266 L114.922697,141.929266 L112.607344,141.929266 L101.445497,102.269864 L107.713948,79.8314199 L119.494736,124.56751 L150.19159,8 L164.075535,8 L172.625759,8 L179.581801,34.4147116 L173.126492,59.1105147 L161.408674,17.4756813 Z M156.836635,141.929266 L154.814081,141.929266 L143.461702,101.903793 L149.758548,79.3637023 L161.581155,123.912537 L192.105528,8 L205.989473,8 L168.296067,141.929266 L156.836635,141.929266 Z M119.505054,17.4390205 L84.4681913,141.929266 L82.1528383,141.929266 L70.6934059,141.929266 L33,8 L46.8839454,8 L77.5807986,124.56751 L108.277652,8 L122.161597,8 L130.819671,8 L137.748192,34.1074031 L131.266144,58.9054971 L119.505054,17.4390205 Z M95.7539255,34.4147116 L89.2986159,59.1105147 L74.9139379,8 L88.7978833,8 L95.7539255,34.4147116 Z" id="path-1"></path>
+        <filter x="-0.7%" y="-1.1%" width="102.8%" height="104.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="3" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.898039216   0 0 0 0 0.525490196   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="twitter-preview-copy" transform="translate(-33.000000, -8.000000)">
+            <g id="emblem">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
