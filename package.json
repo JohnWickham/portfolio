@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnWickham/portfolio.git"
+  },
+  "author": "John Wickham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnWickham/portfolio/issues"
+  },
+  "homepage": "https://github.com/JohnWickham/portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
