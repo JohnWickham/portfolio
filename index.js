@@ -11,3 +11,6 @@ app.get('/posts/:name', function(request, response) {
 app.listen(port, function() {
   console.log(`Server started on port ${port}`);
 });
+
+module.exports = app;
+module.exports.handler = serverless(app);
