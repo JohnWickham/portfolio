@@ -4,7 +4,7 @@ const port = 1314;
 
 app.use(express.static('static'));
 app.get('/posts/:name', function(request, response) {
-  resposne.send("Will load post named: " + request.params.name);
+  response.send("Will load post named: " + request.params.name);
 });
 
 app.listen(port, function() {
