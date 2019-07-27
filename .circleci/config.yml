@@ -2,4 +2,5 @@ version: 2
 jobs:
   build:
     branches:
-      - linode
+      only:
+        - linode
