@@ -3,4 +3,4 @@ jobs:
   build:
     branches:
       only:
-        - linode
+        - node
