@@ -3,11 +3,13 @@ const path = require('path');
 const app = express();
 const port = 1314;
 
-app.use(express.static('static'));
+app.use(express.static('./static'));
 
-app.get('/posts/:name', function(request, response) {
-  response.send("Will load post named: " + request.params.name);
-});
+let postsRoutes = require('./routers/posts');
+app.use('/posts', postsRoutes);
+
+let libraryRoutes = require('./routers/library');
+app.use('/library', libraryRoutes);
 
 app.use(function(request, response) {
   response.sendFile(path.join(__dirname + '/static/404.html'));
