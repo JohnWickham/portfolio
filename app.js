@@ -13,6 +13,11 @@ app.use('/posts', postsRoutes);
 let libraryRoutes = require('./routers/library');
 app.use('/library', libraryRoutes);
 
+let deploymentController = require('./controllers/deploymentController');
+app.post('/deploy', function(request, response) {
+  deploymentController.deploy();
+});
+
 // Catch any unhandled request and serve 404
 app.use(function(request, response) {
   response.status(404).sendFile(path.join(__dirname + '/static/404.html'));
