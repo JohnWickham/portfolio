@@ -1,6 +1,0 @@
-version: 2
-jobs:
-  deploy:
-    steps:
-      - run: |
-          ssh $SSH_USER@$SSH_HOST "cd portfolio && git pull && sudo service sitehost restart"
