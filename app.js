@@ -14,9 +14,8 @@ let libraryRoutes = require('./routers/library');
 app.use('/library', libraryRoutes);
 
 let deploymentController = require('./controllers/deploymentController');
-app.post('/deploy', function(request, response) {
-  deploymentController.deploy();
-});
+app.post('/deploy/test', deploymentController.testDeploy);
+app.post('/deploy',  deploymentController.deploy);
 
 // Catch any unhandled request and serve 404
 app.use(function(request, response) {
