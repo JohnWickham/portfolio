@@ -5,14 +5,17 @@ const port = 1314;
 
 app.use(express.static('./static'));
 
+// Post Routes
 let postsRoutes = require('./routers/posts');
 app.use('/posts', postsRoutes);
 
+// Library Routes
 let libraryRoutes = require('./routers/library');
 app.use('/library', libraryRoutes);
 
+// Catch any unhandled request and serve 404
 app.use(function(request, response) {
-  response.sendFile(path.join(__dirname + '/static/404.html'));
+  response.status(404).sendFile(path.join(__dirname + '/static/404.html'));
 });
 
 app.listen(port, function() {
