@@ -3,6 +3,10 @@ const path = require('path');
 const app = express();
 const port = 1314;
 
+// Enforce secure connections
+let enforce = require('./middleware/secureConnection');
+app.use(enforce);
+
 app.use(express.static('./static'));
 
 // Post Routes
