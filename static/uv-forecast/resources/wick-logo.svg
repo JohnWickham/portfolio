@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="46px" viewBox="0 0 74 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Combined Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="30.679328%" x2="87.7382409%" y2="69.320672%" id="linearGradient-1">
+            <stop stop-color="#04DE71" offset="0%"></stop>
+            <stop stop-color="#FFCD16" offset="22.6430532%"></stop>
+            <stop stop-color="#FF9500" offset="51.85019%"></stop>
+            <stop stop-color="#FF3B30" offset="76.8845017%"></stop>
+            <stop stop-color="#AA00FE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-684.000000, -3556.000000)" fill="url(#linearGradient-1)">
+            <path d="M688.801901,3556 L699.5,3596.344 L710.198099,3556 L717.681696,3556 L720,3565.23148 L717.831088,3574 L713.973,3559.624 L701.963359,3602 L697.036641,3602 L684,3556 L688.801901,3556 Z M731.663516,3556 L734,3565.30268 L731.831709,3574 L727.973,3559.624 L715.982,3601.934 L716,3602 L711.947379,3602 L708,3588.58814 L710.216833,3581 L713.962,3594.601 L724.198099,3556 L731.663516,3556 Z M743,3556 L729.982,3601.932 L730,3602 L725.965753,3602 L722,3587.9258 L724.199692,3580 L728.006,3594.437 L738.198099,3556 L743,3556 Z M739.947379,3602 L736,3588.58814 L738.216833,3581 L742.472,3596.451 L753.198099,3556 L758,3556 L744.963359,3602 L739.947379,3602 Z M703.663516,3556 L706,3565.30268 L706,3565.30268 L703.831709,3574 L699,3556 L703.663516,3556 Z" id="Combined-Shape-Copy"></path>
+        </g>
+    </g>
+</svg>

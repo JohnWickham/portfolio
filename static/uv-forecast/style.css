@@ -1,0 +1,505 @@
+html, body {
+  --green-color: #04DE71;
+  --yellow-color: #FFCD16;
+  --orange-color: #FF9500;
+  --red-color: #FF3B30;
+  --purple-color: #AA00FE;
+  --dark-background-color: #090909;
+  --light-background-color: #101010;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Helvetica', sans-serif;
+  --animation-timing-curve: cubic-bezier(0.005, 1.000, 1.000, 1);
+  
+  margin: 0;
+  padding: 0;
+  
+  background: var(--dark-background-color);
+  font-family: var(--font-family);
+  color: white;
+}
+
+
+
+
+
+
+/* Build-in Animations */
+
+/* Default build-in animation. Fades opacity and slides up */
+.build-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s var(--animation-timing-curve), transform 1s var(--animation-timing-curve);
+}
+
+.build-in.from-left {
+  transform: translateX(-50px);
+}
+
+.build-in.from-right {
+  transform: translateX(50px);
+}
+
+.build-in.second {
+  transition-delay: 0.25s;
+}
+
+.build-in.third {
+  transition-delay: 0.5s;
+}
+
+.build-in.start {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .build-in {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+
+
+
+
+/* Text Styles */
+
+h1 {
+  font-size: 104px;
+  letter-spacing: -2.03px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 44px;
+  letter-spacing: -0.86px;
+  margin: 15px 0;
+}
+
+h3 {
+  font-size: 32px;
+  color: #7F7F7F;
+  letter-spacing: 3.74px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h4 {
+  font-size: 26px;
+  letter-spacing: -0.81px;
+  margin: 0;
+}
+
+p {
+  font-size: 26px;
+  letter-spacing: 0;
+  max-width: 616px;
+  margin: 55px auto;
+}
+
+.center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  
+  h1 {
+    font-size: 80px;
+    letter-spacing: -1.56px;
+    margin: 7px 0;
+  }
+  
+  h2 {
+    font-size: 35px;
+    letter-spacing: -0.68px;
+    margin: 5px 0;
+  }
+  
+  h3 {
+    font-size: 23px;
+    color: #7F7F7F;
+    letter-spacing: 2.69px;
+    text-transform: uppercase;
+    margin: 5px 0;
+  }
+  
+  h4 {
+    font-size: 18px;
+    letter-spacing: -0.56px;
+  }
+  
+  p {
+    font-size: 19px;
+    letter-spacing: 0;
+    max-width: 546px;
+    margin: 30px auto;
+  }
+  
+}
+
+@media (max-width: 414px) {
+  
+  h1 {
+    font-size: 56px;
+    letter-spacing: -1.09px;
+    margin: 10px 0;
+  }
+  
+  h2 {
+    font-size: 30px;
+    letter-spacing: -0.59px;
+    margin: 5px 0;
+  }
+  
+  h3 {
+    font-size: 21px;
+    letter-spacing: 2.45px;
+    margin: 5px 0;
+  }
+  
+  h4 {
+    font-size: 18px;
+    letter-spacing: -0.56px;
+  }
+  
+  p {
+    font-size: 19px;
+    letter-spacing: 0;
+    margin: 20px 0;
+    max-width: 100%;
+  }
+  
+}
+
+@media (max-width: 320px) {
+  
+  h1 {
+    font-size: 45px;
+    letter-spacing: -0.88px;
+    margin: 5px 0;
+  }
+  
+  h2 {
+    font-size: 25px;
+    letter-spacing: -0.49px;
+    margin: 5px 0;
+  }
+  
+  h3 {
+    font-size: 18px;
+    letter-spacing: 2.1px;
+    margin: 5px 0;
+  }
+  
+  h4 {
+    font-size: 16px;
+    letter-spacing: -0.56px;
+  }
+  
+  p {
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+  
+}
+
+
+
+
+
+
+
+.gradient-fill {
+  display: inline-block;
+  background: linear-gradient(to right, var(--green-color), var(--yellow-color), var(--orange-color), var(--red-color), var(--purple-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-scroll {
+  background: linear-gradient(to right, var(--green-color), var(--yellow-color), var(--orange-color), var(--red-color), var(--purple-color), var(--red-color), var(--orange-color), var(--yellow-color), var(--green-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: gradient-scroll 15s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes gradient-scroll {
+  to {background-position: 200%}
+}
+
+
+
+
+
+
+
+
+
+/* Device Models */
+
+.device-model {
+  background: url(./resources/device-model-background.svg);
+  background-size: contain;
+  background-position: center center bottom;
+  background-repeat: no-repeat;
+  width: 459px;
+  height: 504px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.device-model img {
+  width: 324px;
+  height: 394px;
+  margin-left: -20px;
+}
+
+@media (max-width: 768px) {
+  
+  .device-model {
+    width: 253px;
+    height: 277px;
+  }
+
+  .device-model img {
+    width: 179px;
+    height: 217px;
+  }
+  
+}
+
+/* Content */
+
+.heading-section {
+  padding: 115px 0;
+}
+
+@media (max-width: 768px) {
+  .heading-section {
+    padding: 85px 0 70px 0;
+  }
+}
+
+.today-section {
+  background: var(--light-background-color);
+  padding: 135px 0 115px 0;
+  margin-top: 135px;
+}
+
+.today-section .device-model {
+  margin-top: -135px;
+  margin: -270px auto 85px auto;
+}
+
+@media (max-width: 768px) {
+  .today-section {
+    padding: 135px 0 75px 0;
+  }
+  
+  .today-section .device-model {
+    margin: -270px auto 65px auto;
+  }
+}
+
+@media (max-width: 414px) {
+  .today-section {
+    padding: 135px 25px 35px 25px;
+  }
+  
+  .today-section .device-model {
+    margin-bottom: 35px;
+  }
+}
+
+.forecast-section {
+  padding: 135px 50px;
+}
+
+.forecast-section .layout-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 459px 1fr;
+  grid-gap: 105px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .forecast-section {
+    padding: 60px;
+  }
+  
+  .forecast-section .layout-wrapper {
+    grid-template-columns: 253px 1fr;
+    grid-gap: 60px;
+  }
+}
+
+@media (max-width: 414px) {
+  .forecast-section {
+    padding: 35px 25px;
+  }
+  
+  .forecast-section .layout-wrapper {
+    display: block;
+  }
+  
+  .forecast-section .device-model {
+    margin-bottom: 30px;
+  }
+}
+
+.complication-section {
+  overflow-x: hidden;
+  background: var(--light-background-color);
+  padding: 105px 0 67px 0;
+}
+
+.complication-section .layout-wrapper {
+  max-width: 1589px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 110px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 85px;
+}
+
+@media (min-width: 414px) {
+  .complication-section .layout-wrapper .device-model:nth-of-type(3) ~ .device-model {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .complication-section {
+    padding: 60px 0 50px 0;
+  }
+  
+  .complication-section .layout-wrapper {
+    margin-top: 60px;
+    grid-gap: 60px;
+  }
+}
+
+@media (max-width: 414px) {
+  .complication-section {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px 25px 35px 25px;
+    overflow: visible;
+    margin-top: 46px;
+    text-align: left;
+  }
+  
+  .complication-section .layout-wrapper {
+    margin: -40px -25px 30px -25px;
+    padding-left: 25px;
+    grid-gap: 35px;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  
+  .complication-section .layout-wrapper::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .complication-section .layout-wrapper .device-model {
+    scroll-snap-align: start;
+  }
+}
+
+footer {
+  padding: 85px 0;
+}
+
+.app-store-badge {
+  background: #161616;
+  border-radius: 31px;
+  padding: 30px 45px;
+  text-align: left;
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.app-store-badge img {
+  margin-right: 30px;
+}
+
+.app-store-badge p {
+  font-size: 18px;
+  letter-spacing: -0.56px;
+  margin: 7px 0;
+}
+
+@media (max-width: 768px) {
+  .app-store-badge {
+    padding: 18px 35px;
+  }
+  .app-store-badge img {
+    width: 49px;
+  }
+}
+
+@media (max-width: 414px) {
+  .app-store-badge {
+    padding: 13px 30px;
+  }
+  
+  .app-store-badge img {
+    width: 45px;
+    margin-right: 10px;
+  }
+  
+  .app-store-badge p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 320px) {
+  .app-store-badge img {
+    width: 30px;
+  }
+}
+
+p.attribution {
+  font-size: 19px;
+  color: #4E4E4E;
+  letter-spacing: -0.59px;
+  max-width: 870px;
+}
+
+@media (max-width: 768px) {
+  p.attribution {
+    font-size: 14px;
+    max-width: 635px;
+  }
+  
+  img.logo {
+    width: 56px;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 650px) {
+  footer {
+    padding: 85px 25px;
+  }
+}
+
+@media (max-width: 414px) {
+  footer {
+    padding: 35px 25px;
+  }
+}

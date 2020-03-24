@@ -9,6 +9,10 @@ app.use(enforce);
 
 app.use(express.static('./static'));
 
+// Minisite Routes
+let minisiteRoutes = require('./routers/minisites');
+app.use('/', minisiteRoutes);
+
 // Post Routes
 let postsRoutes = require('./routers/posts');
 app.use('/posts', postsRoutes);
