@@ -420,6 +420,49 @@ p {
   }
 }
 
+.dark-sky-section {
+  padding: 135px 50px;
+}
+
+.dark-sky-section .layout-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 459px;
+  grid-gap: 105px;
+  align-items: center;
+}
+
+.dark-sky-attribution {
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .dark-sky-section {
+    padding: 60px;
+  }
+  
+  .dark-sky-section .layout-wrapper {
+    grid-template-columns: 1fr 253px;
+    grid-gap: 60px;
+  }
+}
+
+@media (max-width: 414px) {
+  .dark-sky-section {
+    padding: 35px 25px;
+  }
+  
+  .dark-sky-section .layout-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .dark-sky-section .device-model {
+    margin-bottom: 30px;
+  }
+}
+
 footer {
   padding: 85px 0;
 }
