@@ -39,6 +39,10 @@ html, body {
   transform: translateX(50px);
 }
 
+.build-in.scale {
+  transform: scale(0.0);
+}
+
 .build-in.second {
   transition-delay: 0.25s;
 }
@@ -475,58 +479,28 @@ p {
   }
 }
 
+.app-store-section .image-layout-wrapper {
+  position: relative;
+  margin: 30px 0;
+}
+
+.app-store-section .image-layout-wrapper img:last-of-type {
+  position: absolute;
+  z-index: 1;
+  width: 61px;
+  height: 61px;
+  bottom: 0;
+  margin-bottom: -10px;
+  margin-left: -30px;
+}
+
+.app-store-section p {
+  margin: 13px 0;
+  max-width: 100%;
+}
+
 footer {
   padding: 85px 0;
-}
-
-.app-store-badge {
-  background: #161616;
-  border-radius: 31px;
-  padding: 30px 45px;
-  text-align: left;
-  display: inline-flex;
-  margin: 0 auto;
-}
-
-.app-store-badge img {
-  margin-right: 30px;
-}
-
-.app-store-badge p {
-  font-size: 18px;
-  letter-spacing: -0.56px;
-  margin: 7px 0;
-}
-
-@media (max-width: 768px) {
-  .app-store-badge {
-    padding: 18px 35px;
-  }
-  .app-store-badge img {
-    width: 49px;
-  }
-}
-
-@media (max-width: 414px) {
-  .app-store-badge {
-    padding: 13px 30px;
-  }
-  
-  .app-store-badge img {
-    width: 45px;
-    margin-right: 10px;
-  }
-  
-  .app-store-badge p {
-    font-size: 13px;
-    margin: 2px 0;
-  }
-}
-
-@media (max-width: 320px) {
-  .app-store-badge img {
-    width: 30px;
-  }
 }
 
 p.attribution {
