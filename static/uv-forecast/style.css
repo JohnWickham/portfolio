@@ -259,7 +259,7 @@ p {
   align-items: center;
 }
 
-.device-model img {
+.device-model > * {
   --device-model-content-width: 324px;
   --device-model-content-height: 394px;
   width: var(--device-model-content-width);
@@ -274,7 +274,7 @@ p {
     --device-model-height: 277px;
   }
 
-  .device-model img {
+  .device-model > * {
     --device-model-content-width: 179px;
     --device-model-content-height: 217px;
   }
