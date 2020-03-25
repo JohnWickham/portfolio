@@ -422,6 +422,13 @@ p {
   .complication-section .layout-wrapper .device-model {
     scroll-snap-align: start;
   }
+  
+  .complication-section .layout-wrapper::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1px;
+  }
 }
 
 .dark-sky-section {
@@ -460,6 +467,7 @@ p {
   .dark-sky-section .layout-wrapper {
     display: flex;
     flex-direction: column-reverse;
+    align-items: flex-start;
   }
   
   .dark-sky-section .device-model {
