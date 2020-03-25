@@ -248,8 +248,11 @@ p {
   background-size: contain;
   background-position: center center bottom;
   background-repeat: no-repeat;
-  width: 459px;
-  height: 504px;
+  
+  --device-model-width: 459px;
+  --device-model-height: 504px;
+  width: var(--device-model-width);
+  height: var(--device-model-height);
   
   display: flex;
   justify-content: center;
@@ -257,21 +260,23 @@ p {
 }
 
 .device-model img {
-  width: 324px;
-  height: 394px;
+  --device-model-content-width: 324px;
+  --device-model-content-height: 394px;
+  width: var(--device-model-content-width);
+  height: var(--device-model-content-height);
   margin-left: -20px;
 }
 
 @media (max-width: 768px) {
   
   .device-model {
-    width: 253px;
-    height: 277px;
+    --device-model-width: 253px;
+    --device-model-height: 277px;
   }
 
   .device-model img {
-    width: 179px;
-    height: 217px;
+    --device-model-content-width: 179px;
+    --device-model-content-height: 217px;
   }
   
 }
