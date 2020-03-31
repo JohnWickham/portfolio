@@ -17,13 +17,13 @@ router.get('/:name', function(request, response, next) {
       return;
     }
 
-    outputPostContent(filePath, response, next);
+    getPostContent(filePath, response, next);
 
   });
 
 });
 
-function outputPostContent(filePath, response, next) {
+function getPostContent(filePath, response, next) {
 
   fileSystem.readFile(filePath, function read(error, content) {
    
@@ -34,10 +34,34 @@ function outputPostContent(filePath, response, next) {
     let asString = content.toString();
     let asHTML = markdown.toHTML(asString);
 
-    response.header("Content-Type", "text/html");
-    response.send(asHTML);
+    let post = {
+      title: 
+    }
+    renderPost(asHTML);
   
   });
+
+}
+
+function renderPost(post, response, next) {
+
+  let fileName = "post.html"
+  let relativeFilePath = "./static/posts/" + fileName;
+  let filePath = path.resolve(relativeFilePath);
+  fileSystem.readFile(filePath, function read(error, content) {
+   
+    if (error) {
+      next();
+    }
+    
+    let asString = content.toString();
+    let asHTML = markdown.toHTML(asString);
+    renderPost(asHTML);
+  
+  });
+
+  response.header("Content-Type", "text/html");
+  response.send(asHTML);
 
 }
 
