@@ -85,7 +85,7 @@ h2 {
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 25px;
   color: #7F7F7F;
   letter-spacing: 3.74px;
   text-transform: uppercase;
@@ -103,6 +103,10 @@ p {
   letter-spacing: 0;
   max-width: 616px;
   margin: 55px auto;
+}
+
+a {
+  color: white;
 }
 
 .center {
@@ -286,6 +290,10 @@ p {
 }
 
 /* Content */
+
+header {
+  padding: 50px 0 0 0;
+}
 
 .heading-section {
   padding: 115px 0;
@@ -532,4 +540,19 @@ p.attribution {
   footer {
     padding: 35px 25px;
   }
+}
+
+
+
+
+
+
+.privacy {
+  max-width: 900px;
+  padding: 25px;
+  margin: 50px auto;
+}
+
+.privacy p {
+  max-width: 100%;
 }
