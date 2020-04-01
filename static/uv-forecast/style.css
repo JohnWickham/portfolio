@@ -105,10 +105,6 @@ p {
   margin: 30px auto;
 }
 
-a {
-  color: white;
-}
-
 .center {
   text-align: center;
 }
@@ -505,6 +501,12 @@ header {
 .app-store-section p {
   margin: 13px 0;
   max-width: 100%;
+}
+
+.app-store-section a {
+  text-decoration: none;
+  color: #36A1F1;
+  border-bottom: 2px solid rgba(54, 160, 241, 0.2);
 }
 
 footer {
