@@ -1,44 +1,18 @@
-const express = require('express');
-const router = express.Router();
-const fileSystem = require('fs');
-const path = require('path');
-const markdown = require( "marked" );
+var express = require('express');
+var router = express.Router();
+let path = require('path');
 
-router.get('/:name', function(request, response, next) {
-  
-  let fileName = request.params.name + ".md"
-  let relativeFilePath = "./static/posts/" + fileName;
-  let filePath = path.resolve(relativeFilePath);
-  fileSystem.access(filePath, error => {
-    
-    if (error) {
-      console.log(error);
-      next();
-      return;
-    }
+let responseOptions = {
+  root: path.join(__dirname, '../static'),
+  dotfiles: 'deny',
+  headers: {
+    'x-timestamp': Date.now(),
+    'x-sent': true
+  }
+};
 
-    renderPost(filePath, response, next);
-
-  });
-
+router.get('/:name', function(request, response) {
+  response.send("Will load post named: " + request.params.name);
 });
-
-function renderPost(filePath, response, next) {
-
-  fileSystem.readFile(filePath, function read(error, content) {
-   
-    if (error) {
-      next();
-    }
-    
-    let asString = content.toString();
-    let asHTML = markdown(asString);
-    
-    response.header("Content-Type", "text/html");
-    response.send(asHTML);
-  
-  });
-
-}
 
 module.exports = router;
