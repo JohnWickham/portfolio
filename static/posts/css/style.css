@@ -78,6 +78,7 @@ ul.posts li > a {
 header img {
     display: block;
     margin: 50px auto;
+    width: 70px;
 }
 
 time {
