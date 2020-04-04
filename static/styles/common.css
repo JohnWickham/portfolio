@@ -52,8 +52,8 @@ nav {
 nav ul {
 	list-style: none;
 	display: grid;
-	grid-template-columns: 0.33fr 0.33fr 0.33fr;
-	max-width: 320px;
+	grid-template-columns: repeat(4, 1fr);
+	max-width: 450px;
 	padding: 0;
 	margin: 0 auto;
 }
