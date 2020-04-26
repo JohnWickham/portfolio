@@ -2,43 +2,44 @@ const express = require('express');
 const router = express.Router();
 const fileSystem = require('fs');
 const path = require('path');
-const markdown = require( "marked" );
 
-router.get('/:name', function(request, response, next) {
-  
-  let fileName = request.params.name + ".md"
-  let relativeFilePath = "./static/posts/" + fileName;
-  let filePath = path.resolve(relativeFilePath);
-  fileSystem.access(filePath, error => {
-    
-    if (error) {
-      console.log(error);
-      next();
-      return;
-    }
+const databaseFile = 'static/posts/db.json';
+function getDatabase() {
+  let promise = new Promise((resolve, reject) => {
 
-    renderPost(filePath, response, next);
+    fileSystem.readFile(databaseFile, 'utf-8', (error, data) => {
+      if (error) reject(error);
+      let database = JSON.parse(data);
+      resolve(database);
+    });
 
   });
 
+  return promise;
+}
+
+router.get('/', (request, response, next) => {
+  getDatabase().then((database) => {
+    response.json(database.models.Post).end();
+  }).catch((error) => {
+    response.status(500).end();
+  });
 });
 
-function renderPost(filePath, response, next) {
+router.get('/:name', function(request, response, next) {
 
-  fileSystem.readFile(filePath, function read(error, content) {
-   
-    if (error) {
-      next();
-    }
-    
-    let asString = content.toString();
-    let asHTML = markdown(asString);
-    
-    response.header("Content-Type", "text/html");
-    response.send(asHTML);
-  
-  });
+    getDatabase().then((database) => {
+      
+      database.models.Post.forEach(post => {
+        if (post.slug == request.params.name) response.json(post).end();
+      });
 
-}
+      response.status(404).end();
+
+    }).catch((error) => {
+      response.json(error).end();
+    });
+
+});
 
 module.exports = router;

@@ -15,7 +15,7 @@ app.use('/', minisiteRoutes);
 
 // Post Routes
 let postsRoutes = require('./routers/posts');
-app.use('/posts', postsRoutes);
+app.use('/posts/api', postsRoutes);
 
 // Library Routes
 let libraryRoutes = require('./routers/library');
