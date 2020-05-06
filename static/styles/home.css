@@ -1,150 +1,306 @@
 @charset "UTF-8";
 
-body {
-	background: #E06841;
-}
-
-/* Page Header */
-
-.page-header {
-	background-image: url('/resources/home-header-background-left.svg'), url('/resources/home-header-iPhone.svg');
-	background-repeat: no-repeat;
-	background-size: 250px, 190px;
-	background-position: left center, right center;
-}
-
-/* Experiences Section */
-
-#experience-section {
-	
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	
-	background: #F9F9FB;
-	padding-top: 50px;
-	
-}
-
-#experience-hero {
-	width: 250px;
-	margin: 0px 100px;
-}
-
-#experience-content {
-	width: 50%;
-}
-
-#section-background-separator {
+#intro-section .width-wrapper {
 	position: relative;
-	z-index: 2;
-	
-	width: 100vw;
-	height: 100px;
-	
-	background: url('/resources/section-divide-pattern.svg') ;
+	margin: 220px auto 210px auto;
+}
+
+#intro-section .width-wrapper::before {
+	content: '';
+	position: absolute;
+	width: 118px;
+	height: 92px;
+	top: -30px;
+	left: -150px;
+	background-image: url(../resources/page-accessory-3.svg);
+}
+
+#intro-section .width-wrapper::after {
+	content: '';
+	position: absolute;
+	width: 145px;
+	height: 145px;
+	top: -90px;
+	left: -100px;
+	background-image: url(../resources/page-accessory-1.svg);
+	mix-blend-mode: multiply;
+	transform-origin: 40% 40%;
+	animation: accessory-float 15s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+	#intro-section .width-wrapper::before,
+	#intro-section .width-wrapper::after {
+		mix-blend-mode: normal;
+		z-index: -1;
+	}
+}
+
+#intro-section h1 {
+	margin: 0;
+}
+
+#intro-section p {
+	max-width: 538px;
+	margin: 17px auto;
+}
+
+
+
+
+
+#experiences-section {
+	position: relative;
+	max-width: 862px;
+	margin: 0 auto;
+	padding: 70px 0;
+	background-image: url(/resources/experiences-background-light.svg);
+	background-position: center;
 	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-size: cover;	
+	background-size: contain;
 }
 
-/* WWDC Section */
-
-@keyframes wwdc-image-rotate {
-	0% { transform: rotate(-5deg); }
-	30% { transform: rotate(3deg); }
-	70% { transform: rotate(-1deg); }
-	100% { transform: rotate(0deg); }
+@media (prefers-color-scheme: dark) {
+	#experiences-section {
+		background-image: url(/resources/experiences-background-dark.svg);
+	}
 }
 
-#wwdc-section {
-	
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	
-	margin-top: -90px;
-	
-	background: #E06841;
-	padding: 90px 0px 50px 0px;
-	color: white;
-		
+#experiences-section::after {
+	content: '';
+	position: absolute;
+	width: 140px;
+	height: 146px;
+	top: -70px;
+	right: 93px;
+	background-image: url(../resources/page-accessory-2.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: three-point-turn 100s linear infinite reverse;
 }
 
-#wwdc-section > div {
-	margin: 0px 50px;
+#experiences-section::before {
+	content: '';
+	position: absolute;
+	width: 119px;
+	height: 38px;
+	top: -70px;
+	right: 160px;
+	background-image: url(../resources/page-accessory-6.svg);
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
-#wwdc-content {
-	order: 1;
+#experiences-section h2 {
+	max-width: 70%;
+	margin: 15px auto 15px -50px;
 }
 
-#wwdc-image-container {
-	order: 2;
+#experiences-section p {
+	max-width: 70%;
+	margin: 0 auto;
 }
 
-#wwdc-image {
-	margin-top: -30px;
-	transform-origin: top center;
-	transition: transform 0.1s;
+@media (max-width: 1440px) {
+	#experiences-section {
+		max-width: 800px;
+	}
 }
 
-#wwdc-image.animated {
-	/* Animation */
-	animation: wwdc-image-rotate 1s;
-	animation-timing-function: ease-out;
+@media (max-width: 768px) {
+	#experiences-section {
+		max-width: 532px;
+	}
 }
 
-#wwdc-image-shadow {
+
+
+
+
+#design-build-section {
+	margin: 150px 0;
+	text-align: center;
+}
+
+#design-build-section .width-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+	grid-gap: 140px;
+	justify-content: space-between;
+}
+
+#design-build-section h4 {
+	font-weight: 600;
+	font-size: 25px;
+	letter-spacing: 6.91px;
+	text-transform: uppercase;
+}
+
+#design-build-section .width-wrapper > div {
 	position: relative;
 }
 
-/* Screen Optimizations */
+#design-build-section .width-wrapper > div:first-of-type::before {
+	content: '';
+	position: absolute;
+	width: 118px;
+	height: 63px;
+	bottom: -70px;
+	left: -80px;
+	background-image: url(../resources/page-accessory-bottom-leading.svg);
+}
 
-@media screen and (max-width: 700px) {
-	
-	/* Page Header */
-	
-	.page-header {
-		background-image: none;
+#design-build-section a.button {
+	display: inline-block;
+	margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+	#design-build-section .width-wrapper {
+		max-width: 100%;
+		grid-gap: 63px;
+		padding: 0 34px;
+		box-sizing: border-box;
+	}
+}
+
+
+
+
+
+
+.posts-list-container::before {
+	content: '';
+	position: absolute;
+	width: 165px;
+	height: 170px;
+	top: -30px;
+	left: -120px;
+	background-image: url(../resources/page-accessory-5.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation: three-point-turn 100s linear infinite;
+}
+
+.posts-list-container::after {
+	content: '';
+	position: absolute;
+	width: 165px;
+	height: 170px;
+	bottom: -30px;
+	right: -70px;
+	background-image: url(../resources/page-accessory-1.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	transform-origin: 40% 40%;
+	animation: accessory-float 15s linear infinite reverse;
+}
+
+#posts a.button {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+#elsewhere {
+	padding: 120px 0;
+}
+
+#elsewhere .width-wrapper {
+	width: 100%;
+	max-width: 1024px;
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#elsewhere .width-wrapper a {
+	display: inline-block;
+	width: 105px;
+	height: 105px;
+	font-size: 0;
+	color: transparent;
+	border-radius: 50%;
+	-webkit-tap-highlight-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: margin 0.5s var(--animation-timing-curve);
+}
+
+#elsewhere .width-wrapper a::after {
+	content: attr(data-label);
+	display: block;
+	font-size: 14px;
+	color: var(--primary-text-color);
+	text-align: center;
+	margin-top: 110%;
+	opacity: 0;
+	transform: scale(0, 0);
+	transition: opacity 0.25s var(--animation-timing-curve), transform 0.25s var(--animation-timing-curve);
+}
+
+@media (hover: hover) {
+	#elsewhere .width-wrapper a:hover::after {
+		opacity: 1;
+		transform: scale(1, 1);
 	}
 
-	/* Experiences Section */
-	
-	#experience-section {
-		flex-direction: column;
-		padding: 10px 30px;
+	#elsewhere .width-wrapper a:nth-of-type(even):hover {
+		margin: 40px 30px -40px 10px;
 	}
 	
-	#experience-content {
-		width: 100%;
+	#elsewhere .width-wrapper a:nth-of-type(odd):hover {
+		margin: -40px 30px 40px 10px;
 	}
-	
-	#experience-hero {
-		width: 40%;
+}
+
+@media (max-width: 1440px) {
+	#elsewhere .width-wrapper {
+		max-width: 890px;
 	}
-	
-	/* WWDC Section */
-	
-	#wwdc-section {
-		
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		
-		padding-bottom: 50px;
-		
-	}
-	
-	#wwdc-content {
-		order: 2;
-	}
-	
-	#wwdc-image-container { 
-		order: 1;
-	}
-	
+}
+
+#elsewhere .link-container {
+	display: flex;
+}
+
+#elsewhere .width-wrapper a:nth-of-type(even) {
+	margin: 40px 0 -40px -20px;
+}
+
+#elsewhere .width-wrapper a:nth-of-type(odd) {
+	margin: -40px 0 40px -20px;
+}
+
+#elsewhere .width-wrapper a[href*=itunes] {
+	background-color: #369EFF;
+	background-image: url(/resources/logo-app-store.svg);
+}
+
+#elsewhere .width-wrapper a[href*=github] {
+	background-color: #24292F;
+	background-image: url(/resources/logo-github.svg);
+
+}
+
+#elsewhere .width-wrapper a[href*=twitter] {
+	background-color: #1DA1F2;
+	background-image: url(/resources/logo-twitter.svg);
+	background-position: calc(50% + 2px) calc(50% + 2px);
+}
+
+#elsewhere .width-wrapper a[href*=dribbble] {
+	background-color: #EA4C89;
+	background-image: url(/resources/logo-dribbble.svg);
+}
+
+#elsewhere .width-wrapper a[href*=bonfire] {
+	background-image:  url(/resources/logo-bonfire.svg), linear-gradient(180deg, #FF5738 0%, #FF2E1C 100%);
 }

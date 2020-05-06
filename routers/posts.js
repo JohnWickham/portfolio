@@ -18,15 +18,55 @@ function getDatabase() {
   return promise;
 }
 
-router.get('/', (request, response, next) => {
+router.get('/', (request, response) => {
+  
   getDatabase().then((database) => {
-    response.json(database.models.Post).end();
+
+    let posts = database.models.Post;
+    let tags = database.models.Tag;
+    posts.forEach(post => {
+      post.formattedDate = formattedDate(post);
+    });
+
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    let payload = {
+      posts: posts,
+      tags: tags
+    }
+    response.json(payload).end();
+
   }).catch((error) => {
     response.status(500).end();
   });
+
 });
 
-router.get('/:name', function(request, response, next) {
+router.get('/tags', (request, response) => {
+
+  getDatabase().then(database => {
+    let tags = database.models.Tag;
+    response.json(tags).end();
+  }).catch((error) => {
+    response.json(error).end();
+  });
+
+});
+
+router.get('/tags/:id/posts', (request, response) => {
+
+  getDatabase().then(database => {
+
+    database.models.PostTag.forEach(postTag => {
+      if (postTag.tag_id != params.id) return;
+      // TODO: Get posts with tag
+    });
+
+  });
+
+});
+
+router.get('/:name', (request, response) => {
 
     getDatabase().then((database) => {
       
@@ -41,5 +81,9 @@ router.get('/:name', function(request, response, next) {
     });
 
 });
+
+function formattedDate(post) {
+  return new Date(post.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+}
 
 module.exports = router;

@@ -87,5 +87,16 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# VS Code IDE files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
 # Posts content
 static/posts/
