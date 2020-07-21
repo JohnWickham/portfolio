@@ -11,8 +11,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="/styles/common.css"/>
 	<link rel="stylesheet" type="text/css" href="/styles/home.css"/>
-	
-	<script type="text/javascript" src="/scripts/posts.js"></script>
+	<script src="./scripts/build-in.js" defer></script>
+	<script type="text/javascript" src="/scripts/posts.js" defer></script>
 	
 	<!-- Site icons -->	
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -32,7 +32,6 @@
 		<nav>	
 			<ul>
 				<li><a class="selected" href="/">Hello</a></li>
-				<li><a href="/work">Work</a></li>
 				<li><a href="/posts">Posts</a></li>
 			</ul>
 		</nav>
@@ -45,36 +44,35 @@
 
 	<section id="intro-section" class="center">
 		<div class="width-wrapper">
-			<h1>Hi, I’m John.</h1>
+			<h1 class="build-in">Hi, I’m John.</h1>
 			<p>I’m a designer and developer in Charlotte who loves creating awesome apps and sites.</p>
 		</div>
 	</section>
 
-	<section id="experiences-section">
-		<h2>Experiences people love.</h2>
-		<p>I’m a designer and developer in Charlotte who loves creating awesome apps and sites.</p>
-	</section>
-
-	<section id="design-build-section">
+	<section id="recent">
 		<div class="width-wrapper">
-			<div>
-				<img src="/resources/icon-design.svg" />
-				<h4>Design</h4>
-				<p>I have a lot of fun trying to solve problems by making interfaces that are pretty and nice to use.</p>
-			</div>
-	
-			<div>
-				<img src="/resources/icon-build.svg" />
-				<h4>Build</h4>
-				<p>I’m great at using all kinds of technologies to build top-notch products, backend to frontend.</p>
+			<a href="/uv-forecast">
+				<h4 class="build-in">Recent Project</h4>
+				<h2>UV Forecast</h2>
+				<h3>for Apple Watch</h3>
+			</a>
+
+			<div class="model-layout">
+				<div class="device-model-apple-watch">
+					<img src="./uv-forecast/resources/screenshot-today.png" alt="Hour-by-hour forecast" />
+				</div>
+				<div class="device-model-apple-watch">
+					<img src="./uv-forecast/resources/screenshot-forecast.png" alt="8-day forecast" />
+				</div>
+				<div class="device-model-apple-watch">
+					<img src="./uv-forecast/resources/screenshot-gauge-complication.png" alt="Watch face complications" />
+			  	</div>
 			</div>
 		</div>
-
-		<a class="button">See my work</a>
 	</section>
 	
 	<section id="posts">
-		<h2>Recent Posts</h2>
+		<h2 class="build-in">Recent Posts</h2>
 
 		<div class="posts-list-container">
 			<p class="loading">Loading Posts…</p>
@@ -87,7 +85,7 @@
 
 	<section id="elsewhere">
 		<div class="width-wrapper">
-			<h2>Elsewhere</h2>
+			<h2 class="build-in">Elsewhere</h2>
 			<div class="link-container">
 				<a target="blank" href="https://itunes.apple.com/us/artist/w-wickham/id510544572" data-label="App Store">App Store</a>
 				<a target="blank" href="https://github.com/JohnWickham" data-label="GitHub">GitHub</a>
@@ -100,8 +98,7 @@
 
 	<footer>
 		<div class="width-wrapper">
-			<p>&copy; 2020 John Wickham. Apple, the App Store, and the App Store logo are trademarks of Apple, Inc. registered in the US and other countries.</p>
-			<p><img src="/resources/crown-town.svg" alt="Charlotte city logo" width="15"/> Made in Charlotte</p>	
+			<p>&copy; 2020 John Wickham. <img src="/resources/crown-town.svg" alt="Charlotte city logo" width="18"/> Made in Charlotte.</p>
 		</div>
 	</footer>
 

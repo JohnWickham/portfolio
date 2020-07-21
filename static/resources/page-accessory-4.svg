@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="117" height="37" viewBox="0 0 117 37">
-  <g fill="#828282" fill-opacity=".218" fill-rule="evenodd" transform="translate(-.5 -.526)">
-    <ellipse cx="113.5" cy="5.026" rx="4" ry="4.5"/>
-    <ellipse cx="113.5" cy="33.026" rx="4" ry="4.5"/>
-    <ellipse cx="86.5" cy="5.026" rx="4" ry="4.5"/>
-    <ellipse cx="86.5" cy="33.026" rx="4" ry="4.5"/>
-    <ellipse cx="58.5" cy="5.026" rx="4" ry="4.5"/>
-    <ellipse cx="58.5" cy="33.026" rx="4" ry="4.5"/>
-    <ellipse cx="31.5" cy="5.026" rx="4" ry="4.5"/>
-    <ellipse cx="31.5" cy="33.026" rx="4" ry="4.5"/>
-    <ellipse cx="4.5" cy="5.026" rx="4" ry="4.5"/>
-    <ellipse cx="4.5" cy="33.026" rx="4" ry="4.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="51" viewBox="0 0 168 51">
+  <g fill="#828282" fill-opacity=".218" fill-rule="evenodd">
+    <circle cx="162" cy="6" r="6"/>
+    <circle cx="162" cy="45" r="6"/>
+    <circle cx="123" cy="6" r="6"/>
+    <circle cx="123" cy="45" r="6"/>
+    <circle cx="84" cy="6" r="6"/>
+    <circle cx="84" cy="45" r="6"/>
+    <circle cx="45" cy="6" r="6"/>
+    <circle cx="45" cy="45" r="6"/>
+    <circle cx="6" cy="6" r="6"/>
+    <circle cx="6" cy="45" r="6"/>
   </g>
 </svg>

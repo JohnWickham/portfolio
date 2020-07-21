@@ -221,12 +221,14 @@ p {
   display: inline-block;
   background: linear-gradient(to right, var(--green-color), var(--yellow-color), var(--orange-color), var(--red-color), var(--purple-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-scroll {
   background: linear-gradient(to right, var(--green-color), var(--yellow-color), var(--orange-color), var(--red-color), var(--purple-color), var(--red-color), var(--orange-color), var(--yellow-color), var(--green-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
   animation: gradient-scroll 15s linear infinite;

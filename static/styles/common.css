@@ -48,6 +48,13 @@ h3 {
 	letter-spacing: -1.24px;
 }
 
+h4 {
+	font-weight: 600;
+	font-size: 25px;
+	letter-spacing: 6.91px;
+	text-transform: uppercase;
+}
+
 p,
 time {
 	font-size: 30px;
@@ -127,6 +134,40 @@ a.button::after {
 	}
 }
 
+@media (max-width: 414px) {
+	h1 {
+		font-size: 51px;
+		letter-spacing: 1px;
+	}
+	
+	h2 {
+		font-size: 37px;
+		letter-spacing: 0.74px;
+	}
+	
+	h3 {
+		font-size: 21px;
+		letter-spacing: -0.54px;
+	}
+}
+
+@media (max-width: 414px) {
+	h1 {
+		font-size: 51px;
+		letter-spacing: 1px;
+	}
+	
+	h2 {
+		font-size: 37px;
+		letter-spacing: 0.74px;
+	}
+	
+	h3 {
+		font-size: 21px;
+		letter-spacing: -0.54px;
+	}
+}
+
 /* Page Headers */ 
 
 header {
@@ -182,10 +223,9 @@ nav {
 
 nav ul {
 	list-style: none;
-	display: grid;
-	grid-auto-flow: column;
+	display: flex;
 	justify-content: space-around;
-	max-width: 256px;
+	max-width: 185px;
 	padding: 0;
 	margin: 0 auto;
 }
@@ -222,29 +262,16 @@ nav ul li a.selected:after {
 
 @media (hover: hover) {
 	nav ul li a:not(.selected):hover:after {
-		  content: "";
-		  display: block;
-		  visibility: visible;
-		  width: 4px; 
-		  height: 4px; 
-		  margin: auto auto;
-		  border-radius: 2px; 
-		  background: rgba(255, 255, 255, 0.25);
-		  transition: background 0.15s;
+		content: "";
+		display: block;
+		visibility: visible;
+		width: 4px; 
+		height: 4px; 
+		margin: auto auto;
+		border-radius: 2px; 
+		background: rgba(255, 255, 255, 0.25);
+		transition: background 0.15s;
 	}
-  }
-
-/* Footer Elements */
-
-footer {
-	padding: 50px;
-	color: darkgray;
-	text-align: center;
-}
-
-footer .width-wrapper {
-	max-width: 1040px;
-	margin: 0 auto;
 }
 
 /* Posts */
@@ -321,6 +348,26 @@ footer .width-wrapper {
 
 }
 
+/* Footer Elements */
+
+footer {
+	padding: 2em;
+	box-sizing: border-box;
+	color: darkgray;
+	text-align: center;
+}
+
+footer .width-wrapper {
+	max-width: 550px;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	footer .width-wrapper {
+		width: 100%;
+	}
+}
+
 /* Miscellaneous */
 
 .width-wrapper {
@@ -357,4 +404,46 @@ footer .width-wrapper {
 	30% { transform: translate(50px, -25px) rotate(0.25turn) }
 	60% { transform: translate(50px, 25px) rotate(-0.25turn) }
 	100% {transform: translate(0, 0) rotate(0turn) }
+}
+
+/* Build-in Animations */
+
+/* Default build-in animation. Fades opacity and slides up */
+.build-in {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 1s var(--animation-timing-curve), transform 1s var(--animation-timing-curve);
+}
+
+.build-in.from-left {
+	transform: translateX(-50px);
+}
+
+.build-in.from-right {
+	transform: translateX(50px);
+}
+
+.build-in.second {
+	transition-delay: 0.25s;
+}
+
+.build-in.third {
+	transition-delay: 0.5s;
+}
+
+.build-in.scale {
+	transform: scale(0.0);
+}
+
+.build-in.start {
+	opacity: 1;
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.build-in {
+		transition: none;
+		opacity: 1;
+		transform: none;
+	}
 }

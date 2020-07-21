@@ -21,7 +21,7 @@ window.onload = function() {
 		return `<option value=${tag._id}>${tag.name}</option>`
 	}
 
-	fetchPosts();
+	if (postListElement) fetchPosts();
 
 	function fetchPosts(tag = '') {
 
