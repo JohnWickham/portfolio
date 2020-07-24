@@ -348,6 +348,16 @@ nav ul li a.selected:after {
 
 }
 
+@media (max-width: 640px) {
+	.posts-list  {
+		padding: 1px 20px;
+	}
+
+	.posts-list li {
+		margin-top: 30px;
+	}
+}
+
 /* Footer Elements */
 
 footer {
