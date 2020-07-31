@@ -12,7 +12,8 @@
 	height: 129px;
 	top: -40px;
 	left: -190px;
-	background: url(../resources/page-accessory-3.svg) no-repeat center/contain;
+	background-image: url(../resources/accessory-background-pattern.svg);
+	background-size: 25px;
 }
 
 #intro-section .width-wrapper::after {
@@ -111,11 +112,12 @@
 	content: '';
 	display: block;
 	position: absolute;
-	top: -65px;
+	top: -85px;
 	right: 175px;
-	width: 168px;
-	height: 51px;
-	background: url(../resources/page-accessory-4.svg) no-repeat;
+	width: 145px;
+	height: 66px;
+	background-image: url(../resources/accessory-background-pattern.svg);
+	background-size: 25px;
 }
 
 #recent .width-wrapper::after {
