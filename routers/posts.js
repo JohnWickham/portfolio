@@ -57,8 +57,12 @@ router.get('/tags/:id/posts', (request, response) => {
 
   getDatabase().then(database => {
 
+    let posts = [];
+
     database.models.PostTag.forEach(postTag => {
-      if (postTag.tag_id != params.id) return;
+      if (postTag.tag_id == request.params.id) {
+        posts.push(postTag.post_id)
+      }
       // TODO: Get posts with tag
     });
 

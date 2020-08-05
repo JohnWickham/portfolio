@@ -292,10 +292,12 @@ nav ul li a.selected:after {
 	content: '';
 	position: absolute;
 	width: 118px;
-	height: 63px;
-	top: -47px;
-	right: -67px;
-	background-image: url(../resources/page-accessory-top-trailing.svg);
+	height: 100px;
+	top: -50px;
+	right: -90px;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 40% 60%, 0 60%);
+	background-image: url(../resources/accessory-background-pattern.svg);
+	background-size: 25px;
 }
 
 .posts-list-container {
