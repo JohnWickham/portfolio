@@ -23,7 +23,8 @@
 	height: 145px;
 	top: -90px;
 	left: -100px;
-	background: url(../resources/page-accessory-1.svg) no-repeat center/contain;
+	background: var(--key-color);
+	border-radius: 50%;
 	mix-blend-mode: multiply;
 	transform-origin: 40% 40%;
 	animation: accessory-float 15s linear infinite;
