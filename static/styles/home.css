@@ -253,10 +253,8 @@
 	height: 170px;
 	bottom: -30px;
 	right: -70px;
-	background-image: url(../resources/page-accessory-1.svg);
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
+	background: var(--key-color);
+	border-radius: 50%;
 	transform-origin: 40% 40%;
 	animation: accessory-float 15s linear infinite reverse;
 }
