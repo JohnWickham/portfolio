@@ -129,7 +129,7 @@
 	right: 75px;
 	width: 166px;
 	height: 173px;
-	background: url(../resources/page-accessory-2.svg) no-repeat;
+	background: url(../resources/page-accessory-triangle.svg) no-repeat;
 	transform-origin: 30%;
 	animation: accessory-float 100s linear infinite;
 }
@@ -239,7 +239,7 @@
 	height: 170px;
 	top: -30px;
 	left: -120px;
-	background-image: url(../resources/page-accessory-5.svg);
+	background-image: url(../resources/page-accessory-triangle.svg);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
