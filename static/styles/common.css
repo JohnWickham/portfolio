@@ -166,6 +166,10 @@ a.button::after {
 		font-size: 21px;
 		letter-spacing: -0.54px;
 	}
+
+	h4 {
+		font-size: 18px;
+	}
 }
 
 /* Page Headers */ 
@@ -341,6 +345,10 @@ nav ul li a.selected:after {
 	color: var(--secondary-text-color);
 }
 
+.posts-list p {
+	margin: 1em 0;
+}
+
 @media (max-width: 1440px) {
 
 	.posts-list-container,
@@ -352,11 +360,17 @@ nav ul li a.selected:after {
 
 @media (max-width: 640px) {
 	.posts-list  {
-		padding: 1px 20px;
+		padding: 1px 30px;
 	}
 
 	.posts-list li {
 		margin-top: 30px;
+	}
+}
+
+@media (max-width: 414px) {
+	#posts {
+		padding: 20px 0;
 	}
 }
 
