@@ -25,7 +25,10 @@ router.get('/', (request, response) => {
     let posts = database.models.Post;
     let tags = database.models.Tag;
     posts.forEach(post => {
-      post.formattedDate = formattedDate(post);
+      post.formattedDate = formattedDate(post.date);
+      if (post.updated) {
+        post.formattedUpdatedDate = formattedDate(post.updated);
+      }
     });
 
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -86,8 +89,8 @@ router.get('/:name', (request, response) => {
 
 });
 
-function formattedDate(post) {
-  return new Date(post.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+function formattedDate(date) {
+  return new Date(date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 module.exports = router;

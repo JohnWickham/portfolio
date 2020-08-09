@@ -13,7 +13,12 @@ window.onload = function() {
 
 	const postListElement = document.querySelector('.posts-list');
 	function makeListeItemElement(post) {
-		return `<li><a href="/posts/${post.slug}"><h3>${post.title}</h3><time datetime="${post.date}">${post.formattedDate}</time><p>${post.excerpt}</p></a></li>`;
+		let element = `<li><a href="/posts/${post.slug}"><h3>${post.title}</h3><time datetime="${post.date}">${post.formattedDate}</time>`;
+		if (post.formattedUpdatedDate) {
+			element += `<time class="updated">${post.formattedUpdatedDate}</time>`;
+		}
+		element += `<p>${post.excerpt}</p></a></li>`;
+		return element;
 	}
 
 	const tagSelectionControl = document.querySelector('.posts-list-container select');
