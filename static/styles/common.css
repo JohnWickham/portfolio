@@ -352,7 +352,7 @@ time.updated::before {
     height: 3px;
     border-radius: 2px;
     background-color: gray;
-    margin: 0 0.5em 0 0.2em;
+    margin: 0 0.5em;
     vertical-align: middle;
 }
 
