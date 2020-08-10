@@ -172,6 +172,34 @@ a.button::after {
 	}
 }
 
+
+
+
+
+.activity-indicator {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-image: url(/resources/activity-indicator.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	animation: activity-indicator 1s linear infinite;
+	-webkit-animation: activity-indicator 1s linear infinite;
+	-moz-animation: activity-indicator 1s linear infinite;
+}
+
+@keyframes activity-indicator {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(359deg);}
+}
+
+
+
+
+
+
 /* Page Headers */ 
 
 header {
@@ -358,6 +386,15 @@ time.updated::before {
 
 .posts-list p {
 	margin: 1em 0;
+}
+
+#posts .loading {
+	margin: 30px 0;
+}
+
+#posts .loading p {
+	margin: 10px 0;
+	color: var(--secondary-text-color);
 }
 
 @media (max-width: 1440px) {
