@@ -15,7 +15,7 @@ window.onload = function() {
 	function makeListeItemElement(post) {
 		let element = `<li><a href="/posts/${post.slug}"><h3>${post.title}</h3><time datetime="${post.date}">${post.formattedDate}</time>`;
 		if (post.formattedUpdatedDate) {
-			element += `<time class="updated">${post.formattedUpdatedDate}</time>`;
+			element += `<time class="updated">Updated ${post.formattedUpdatedDate}</time>`;
 		}
 		element += `<p>${post.excerpt}</p></a></li>`;
 		return element;
