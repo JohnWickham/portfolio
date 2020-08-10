@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+	
+<head>
+    <title>CSS Easing Function Demo</title>
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+
+<style>
+
+    #demo {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+        transform: translateX(0);
+        transition: transform 3s cubic-bezier(0.005, 1.000, 1.000, 1);
+    }
+
+    #demo.animate {
+        transform: translateX(250px);
+    }
+
+</style>
+
+<body>
+		
+    <div id="demo">
+        Click me
+    </div>
+    
+    <script>
+        let demo = document.getElementById('demo');
+        demo.addEventListener('click', (e => {
+            demo.classList.add('animate');
+        }));
+    </script>
+
+</body>
+
+</html>
