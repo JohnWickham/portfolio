@@ -389,24 +389,6 @@
 	}
 }
 
-@media (max-width: 1440px) {
-	#elsewhere .width-wrapper {
-		max-width: 890px;
-	}
-}
-
-@media (max-width: 850px) {
-	#elsewhere .width-wrapper {
-		display: block;
-		text-align: center;
-	}
-
-	#elsewhere .link-container {
-		margin: 100px auto 0 auto;
-		width: min-content;
-	}
-}
-
 #elsewhere .link-container {
 	display: flex;
 }
@@ -445,14 +427,40 @@
 	background-image:  url(/resources/logo-bonfire.svg), linear-gradient(180deg, #FF5738 0%, #FF2E1C 100%);
 }
 
+@media (max-width: 1440px) {
+	#elsewhere .width-wrapper {
+		max-width: 890px;
+	}
+}
+
+@media (max-width: 850px) {
+	#elsewhere .width-wrapper {
+		display: block;
+		text-align: center;
+	}
+
+	#elsewhere .link-container {
+		margin: 100px auto 0 auto;
+		width: min-content;
+	}
+}
+
 @media (max-width: 600px) {
 	#elsewhere {
 		padding: 30px 0 70px 0;
 	}
+	#elsewhere .width-wrapper a {
+		width: 80px;
+		height: 80px;
+		background-size: 65%;
+	}
+	#elsewhere .width-wrapper a[href*=bonfire] {
+		background-size: 65% 70%, 100%;
+	}
 	#elsewhere .width-wrapper a:nth-of-type(even) {
-		margin: 60px 0 -60px -50px;
+		margin: 60px -20px -70px -30px;
 	}
 	#elsewhere .width-wrapper a:nth-of-type(odd) {
-		margin: -50px 0 40px -40px;
+		margin: -30px -10px 0px -10px;
 	}
 }
