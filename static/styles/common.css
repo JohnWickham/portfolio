@@ -479,6 +479,7 @@ footer .width-wrapper {
 	background-position: center center bottom;
 	background-repeat: no-repeat;
 
+	--device-model-width: 281px;
 	width: var(--device-model-width);
 	height: calc(var(--device-model-width) * 1.1);
 
