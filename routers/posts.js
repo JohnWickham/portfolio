@@ -26,7 +26,7 @@ router.get('/', (request, response) => {
     let tags = database.models.Tag;
     posts.forEach(post => {
       post.formattedDate = formattedDate(post.date);
-      if (post.updated) {
+      if (post.updated && post.updated !== post.date) {
         post.formattedUpdatedDate = formattedDate(post.updated);
       }
     });

@@ -168,7 +168,7 @@
 
 #recent .model-layout {
 	display: grid;
-	--device-model-width: 281px;
+	--device-model-width: 281px !important;
 	grid-template-columns: repeat(3, var(--device-model-width));
 	justify-content: space-between;
 	overflow: hidden;
