@@ -24,17 +24,23 @@ router.get('/', (request, response) => {
 
     let posts = database.models.Post;
     let tags = database.models.Tag;
+    let published = [];
+    
     posts.forEach(post => {
+      if (post.published != 1) return
+      
       post.formattedDate = formattedDate(post.date);
       if (post.updated && post.updated !== post.date) {
         post.formattedUpdatedDate = formattedDate(post.updated);
       }
+      
+      published.push(post);
     });
 
-    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    published.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     let payload = {
-      posts: posts,
+      posts: published,
       tags: tags
     }
     response.json(payload).end();
