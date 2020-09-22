@@ -95,6 +95,9 @@ typings/
 !.vscode/extensions.json
 *.code-workspace
 
+# Nova IDE files
+.nova/
+
 # Local History for Visual Studio Code
 .history/
 
