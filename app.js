@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 1314;
+const port = process.env.PORT || 1314;
 
 // Enforce secure connections
 let enforce = require('./middleware/secureConnection');
