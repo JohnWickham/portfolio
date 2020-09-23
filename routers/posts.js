@@ -9,7 +9,12 @@ function getDatabase() {
 
     fileSystem.readFile(databaseFile, 'utf-8', (error, data) => {
       if (error) reject(error);
-      let database = JSON.parse(data);
+      var database = null;
+      try {
+        database = JSON.parse(data);
+      } catch (error) {
+        reject(error);
+      }
       resolve(database);
     });
 
