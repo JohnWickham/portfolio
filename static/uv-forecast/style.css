@@ -98,11 +98,37 @@ h4 {
   margin: 0;
 }
 
+.badge {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  background-color: rgba(255,149,0,0.20);
+  color: var(--orange-color);
+  padding: 5px 10px;
+  margin: 20px 0 0 0;
+  border-radius: 5px;
+}
+
 p {
   font-size: 26px;
   letter-spacing: 0;
+  line-height: 1.4em;
   max-width: 616px;
   margin: 30px auto;
+}
+
+p a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.20);
+  transition: border-bottom 0.15s ease;
+}
+
+@media (hover: hover) {
+  p a:hover {
+    border-bottom: 2px solid var(--orange-color);
+  }
 }
 
 .center {
@@ -387,6 +413,16 @@ header {
   margin-top: 85px;
 }
 
+.complication-section .notice-container {
+  margin: 50px auto;
+  max-width: 616px;
+  text-align: left;
+}
+
+.complication-section .notice-container p {
+  font-size: 21px;
+}
+
 @media (min-width: 414px) {
   .complication-section .layout-wrapper .device-model:nth-of-type(3) ~ .device-model {
     display: none;
@@ -438,6 +474,10 @@ header {
     display: block;
     width: 1px;
     height: 1px;
+  }
+  
+  .complication-section .notice-container {
+    order: -1;
   }
 }
 
@@ -509,6 +549,12 @@ header {
   text-decoration: none;
   color: #36A1F1;
   border-bottom: 2px solid rgba(54, 160, 241, 0.2);
+}
+
+@media (hover: hover) {
+  .app-store-section a:hover {
+    border-bottom: 2px solid rgba(54, 160, 241);
+  }
 }
 
 footer {
