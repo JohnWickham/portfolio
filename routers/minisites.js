@@ -12,5 +12,8 @@ router.get('/uv-forecast', function(request, response) {
     }
   });
 });
+router.get('/uv-index', function(request, response) {
+  response.redirect(301, '/uv-forecast');
+});
 
 module.exports = router;
