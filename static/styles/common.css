@@ -149,6 +149,10 @@ a.button::after {
 		font-size: 21px;
 		letter-spacing: -0.54px;
 	}
+	
+	p {
+		font-size: 16px;
+	}
 }
 
 @media (max-width: 414px) {
@@ -365,7 +369,7 @@ nav ul li a.selected:after {
 }
 
 .posts-list h3 {
-	margin: 0 0 16px 0;
+	margin: 0 0 5px 0;
 }
 
 .posts-list time {
