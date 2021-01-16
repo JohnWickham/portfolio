@@ -373,7 +373,7 @@ nav ul li a.selected:after {
 }
 
 .posts-list time {
-	display: inline-block;
+	display: block;
 	color: var(--secondary-text-color);
 }
 
