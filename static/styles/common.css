@@ -210,7 +210,7 @@ header {
 	background-color: var(--key-color);
 	padding: 46px 0;
 	background-image: url(/resources/home-header-iPhone.svg), url(/resources/home-header-apps.svg);
-	background-position: left 50px center, right 50px bottom;
+	background-position: left 50px bottom -70px, right 50px bottom -70px;
 	background-repeat: no-repeat;
 }
 
@@ -232,14 +232,15 @@ header svg {
 
 @media (max-width: 900px) {
 	header {
-		background-position: left -200px bottom, right -150px center;
+		background-size: 20% auto, 20% auto;
+		background-position: left 30px bottom -30px, right 20px bottom -30px;
 	}
 }
 
 @media (max-width: 768px) {
 	header {
-		background-size: 307px auto, 206px auto;
-		background-position: left -100px bottom, right -50px center;
+		/* background-size: 307px auto, 206px auto; */
+		background-position: left 30px bottom, right 30px center;
 	}
 }
 
