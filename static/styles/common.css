@@ -209,8 +209,8 @@ a.button::after {
 header {
 	background-color: var(--key-color);
 	padding: 46px 0;
-	background-image: url(/resources/header-accessory-left-light.svg), url(/resources/header-accessory-right-light.svg);
-	background-position: left bottom, right center;
+	background-image: url(/resources/home-header-iPhone.svg), url(/resources/home-header-apps.svg);
+	background-position: left 50px center, right 50px bottom;
 	background-repeat: no-repeat;
 }
 
@@ -222,7 +222,7 @@ header svg {
 @media (prefers-color-scheme: dark) {
 	header {
 		background-color: #0F0F0F;
-		background-image: url(/resources/header-accessory-left-dark.svg), url(/resources/header-accessory-right-dark.svg);
+		background-image: url(/resources/home-header-iPhone-dark.svg), url(/resources/home-header-apps-dark.svg);
 	}
 
 	header svg path {
