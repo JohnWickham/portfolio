@@ -423,8 +423,10 @@
 	background-image: url(/resources/logo-dribbble.svg);
 }
 
-#elsewhere .width-wrapper a[href*=bonfire] {
-	background-image:  url(/resources/logo-bonfire.svg), linear-gradient(180deg, #FF5738 0%, #FF2E1C 100%);
+#elsewhere .width-wrapper a[href*=youtube] {
+	background-color: red;
+	background-image:  url(/resources/logo-youtube.svg);
+	background-size: 65%;
 }
 
 @media (max-width: 1440px) {
