@@ -4,10 +4,6 @@ helmet = require("helmet");
 const app = express();
 const port = process.env.PORT || 1314;
 
-// Enforce secure connections
-let enforce = require('./middleware/secureConnection');
-app.use(enforce);
-
 if (process.env.NODE_ENV !== "development") app.use(helmet());
 
 app.use(express.static('./static'));
