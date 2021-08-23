@@ -31,6 +31,9 @@ router.get('/', (request, response) => {
     let tags = database.models.Tag;
     let published = [];
     
+    // Return only the 5 most recent posts
+    posts = posts.slice(0, 5);
+    
     posts.forEach(post => {
       if (post.published != 1) return
       
