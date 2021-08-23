@@ -121,7 +121,7 @@
 
 
 #recent {
-	margin: 200px auto;
+	margin: 200px auto 150px auto;
 }
 
 #recent .width-wrapper {
@@ -131,7 +131,6 @@
 	background-color: var(--secondary-background-color);
 	padding: 95px 120px;
 	box-sizing: border-box;
-	border-radius: 40px;
 	text-align: center;
 }
 
@@ -197,7 +196,7 @@
 
 @media (max-width: 1440px) {
 	#recent .width-wrapper {
-		width: min(calc(100% - 60px), 1045px);
+		width: min(calc(100% - 60px), 1150px);
 		padding: 65px 80px;
 		box-sizing: border-box;
 	}
