@@ -57,9 +57,9 @@ h4 {
 
 p,
 time {
-	font-size: 30px;
-	letter-spacing: -0.59px;
-	line-height: 44px;
+	font-size: 23px;
+	/* letter-spacing: -0.59px; */
+	line-height: 1.5em;
 }
 
 a {
