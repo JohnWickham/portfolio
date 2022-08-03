@@ -44,8 +44,8 @@ h2 {
 
 h3 {
 	font-weight: 700;
-	font-size: 48px;
-	letter-spacing: -1.24px;
+	font-size: 40;
+	letter-spacing: 0px;
 }
 
 h4 {
@@ -58,7 +58,6 @@ h4 {
 p,
 time {
 	font-size: 23px;
-	/* letter-spacing: -0.59px; */
 	line-height: 1.5em;
 }
 
